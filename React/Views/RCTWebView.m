@@ -42,6 +42,8 @@ NSString *const RCTJSNavigationScheme = @"react-js-navigation";
     _contentInset = UIEdgeInsetsZero;
     _webView = [[UIWebView alloc] initWithFrame:self.bounds];
     _webView.delegate = self;
+    _webView.allowsInlineMediaPlayback = YES;
+    _webView.mediaPlaybackRequiresUserAction= NO;
     [self addSubview:_webView];
   }
   return self;
